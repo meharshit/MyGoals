@@ -21,7 +21,7 @@ class GoalCell: UITableViewCell {
         
         self.goalDescription.text = description
         self.goalType.text = type.rawValue
-        self.goalProgressLbl.text = String(describing:goalProgress) // when we pass a int value in tableview do this way
+        self.goalProgressLbl.text = String(describing: goalProgress) // when we pass a int value in tableview do this way
         
         
         

@@ -30,9 +30,18 @@ class GoalsVC: UIViewController {
     }
 
     
-    @IBOutlet weak var goalButtonWasPressed: UIButton!
+    @IBAction func addGoalButtonWasPressed(_ sender: Any) {
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: "createGoalVC") else{
+            return
+        }
+        presentDetail(viewController)
+        
+    }
     
 }
+
+
+
 
 
 extension GoalsVC : UITableViewDelegate, UITableViewDataSource{
@@ -54,7 +63,5 @@ extension GoalsVC : UITableViewDelegate, UITableViewDataSource{
         cell.ConfigureCell(description: "run run run", type: .longTerm, goalProgress: 2)
         return cell
     }
-
-
 
 }

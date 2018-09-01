@@ -14,7 +14,7 @@
         <!--GoalsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GoalsVC" customModule="MyGoals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalVC" id="BYZ-38-t0r" customClass="GoalsVC" customModule="MyGoals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                         <rect key="frame" x="270" y="31" width="35" height="32"/>
                                         <state key="normal" image="addGoal"/>
                                         <connections>
-                                            <segue destination="tfv-tW-uTF" kind="presentation" id="8lh-n5-gMW"/>
+                                            <action selector="addGoalButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Cu-aM-9Ks"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,18 +168,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="goalButtonWasPressed" destination="jjU-3m-iZ9" id="e1n-VZ-JW8"/>
                         <outlet property="tableView" destination="aXm-ra-2ef" id="e9D-iv-z0S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="-283"/>
+            <point key="canvasLocation" x="532.5" y="-283.0985915492958"/>
         </scene>
         <!--Create GoalVC View Controller-->
         <scene sceneID="1Aj-1a-crU">
             <objects>
-                <viewController id="tfv-tW-uTF" customClass="CreateGoalVCViewController" customModule="MyGoals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createGoalVC" id="tfv-tW-uTF" customClass="CreateGoalVCViewController" customModule="MyGoals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1p-hK-LFU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,8 +206,8 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-aJ-udI">
-                                        <rect key="frame" x="15" y="35" width="14" height="25"/>
-                                        <state key="normal" image="back-1"/>
+                                        <rect key="frame" x="15" y="35.5" width="24" height="24"/>
+                                        <state key="normal" image="back-2"/>
                                         <connections>
                                             <action selector="goToGoalsVCButton:" destination="tfv-tW-uTF" eventType="touchUpInside" id="uGI-P2-Axd"/>
                                         </connections>
@@ -317,11 +316,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mP-xl-1bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="-305"/>
+            <point key="canvasLocation" x="1605" y="-305.28169014084506"/>
         </scene>
     </scenes>
     <resources>
         <image name="addGoal" width="35" height="32"/>
-        <image name="back-1" width="14" height="25"/>
+        <image name="back-2" width="24" height="24"/>
     </resources>
 </document>
