@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FinishGoalVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var createGoalOutlet: UIButton!
@@ -33,6 +34,13 @@ class FinishGoalVC: UIViewController,UITextFieldDelegate {
     @IBAction func createGoalBtnWasPressed(_ sender: Any) {
         
         // when pressed pass the data in the core data model.
+        
+    }
+    
+    // completion handler for saving the data into the core data context
+    func save(completion:(_ finished: Bool)-> ()){
+        
+        
     }
     
 }

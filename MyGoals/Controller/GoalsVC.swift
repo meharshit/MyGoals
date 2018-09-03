@@ -23,13 +23,8 @@ class GoalsVC: UIViewController {
         tableView.dataSource = self
         tableView.isHidden = false
 
-        
-        
-        
-        
     }
 
-    
     @IBAction func addGoalButtonWasPressed(_ sender: Any) {
         guard let viewController = storyboard?.instantiateViewController(withIdentifier: "createGoalVC") else{
             return
@@ -39,9 +34,6 @@ class GoalsVC: UIViewController {
     }
     
 }
-
-
-
 
 
 extension GoalsVC : UITableViewDelegate, UITableViewDataSource{

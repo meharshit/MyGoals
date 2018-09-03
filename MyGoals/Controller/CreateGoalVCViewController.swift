@@ -27,7 +27,6 @@ class CreateGoalVCViewController: UIViewController,UITextViewDelegate {
         // set default color for that call the function
         longTermButtonOutlet.selectedColour()
         shortTermButtonOutlet.deSelectedColour()
-        nextButtonOutlet.deSelectedColour()
         goalTextView.delegate = self
 
        
@@ -65,8 +64,6 @@ class CreateGoalVCViewController: UIViewController,UITextViewDelegate {
             }
             finishButtonWhenPressed.initData(description: goalTextView.text!, type: goalType)
             presentDetail(finishButtonWhenPressed)
-            
-            //nextButtonOutlet.selectedColour()
         }
         
         
