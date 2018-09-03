@@ -26,7 +26,6 @@ extension UIView{
         let endingframe = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let changeInPostion = endingframe.origin.y - startingFrame.origin.y
         
-        
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: curve), animations: {
             self.frame.origin.y = self.frame.origin.y + changeInPostion
         }, completion: nil)

@@ -17,6 +17,7 @@
 		0C2A79D8213685E60099D57D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C2A79D7213685E60099D57D /* Assets.xcassets */; };
 		0C2A79DB213685E60099D57D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2A79D9213685E60099D57D /* LaunchScreen.storyboard */; };
 		0C2A79E4213686BE0099D57D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A79E2213686BE0099D57D /* Model.xcdatamodeld */; };
+		0C5BB7C8213C0E1D00908B7D /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5BB7C7213C0E1D00908B7D /* FinishGoalVC.swift */; };
 		0CD61C43213B144A00BC7421 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD61C42213B144A00BC7421 /* UIViewExt.swift */; };
 		0CD61C45213B1AE600BC7421 /* ButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD61C44213B1AE600BC7421 /* ButtonExt.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		0C2A79DA213685E60099D57D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C2A79DC213685E60099D57D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C2A79E3213686BE0099D57D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0C5BB7C7213C0E1D00908B7D /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 		0CD61C42213B144A00BC7421 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		0CD61C44213B1AE600BC7421 /* ButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				0C2A79D0213685E00099D57D /* AppDelegate.swift */,
 				0C28AD2C2137B84D00D7FB62 /* GoalsVC.swift */,
 				0C28AD3221396A2900D7FB62 /* CreateGoalVCViewController.swift */,
+				0C5BB7C7213C0E1D00908B7D /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				0C28AD3521396F6E00D7FB62 /* UIVCExt.swift in Sources */,
 				0C2A79D1213685E00099D57D /* AppDelegate.swift in Sources */,
 				0C2A79E4213686BE0099D57D /* Model.xcdatamodeld in Sources */,
+				0C5BB7C8213C0E1D00908B7D /* FinishGoalVC.swift in Sources */,
 				0CD61C45213B1AE600BC7421 /* ButtonExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
