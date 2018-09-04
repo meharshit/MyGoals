@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+// globle to all VC variable
+
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
 class GoalsVC: UIViewController {
 

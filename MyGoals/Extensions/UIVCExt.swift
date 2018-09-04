@@ -22,6 +22,22 @@ extension UIViewController{
         present(presentTheViewController, animated: false, completion: nil)// animated is faulse since we have over written the animation above so false
     }
     
+    
+    func presentHomeView(_ viewControllerToPresent: UIViewController){
+        let animation = CATransition()
+        animation.type = kCATransitionPush
+        animation.duration = 0.3
+        animation.subtype = kCATransitionFromRight
+    
+        guard let viewController = presentedViewController else{return}
+        
+        viewController.present(viewControllerToPresent, animated: false) {
+            
+        }
+        
+        
+    }
+    
     func dismissDetail(_ presentTheViewController: UIViewController){
         
         let animation = CATransition()
