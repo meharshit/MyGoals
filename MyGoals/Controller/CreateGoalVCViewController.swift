@@ -34,10 +34,7 @@ class CreateGoalVCViewController: UIViewController,UITextViewDelegate {
 
    
     @IBAction func goToGoalsVCButton(_ sender: Any) {
-        guard let dismissTheController = storyboard?.instantiateViewController(withIdentifier: "goalVC")else{
-            return
-        }
-        dismissDetail(dismissTheController)
+        dismissDetail()
     }
     
     @IBAction func longTermButtonPressed(_ sender: Any) {
@@ -59,11 +56,9 @@ class CreateGoalVCViewController: UIViewController,UITextViewDelegate {
         if goalTextView.text != "" && goalTextView.text != "What is your nextGoal"{
             // the code block defines that what is happening whne we are pressing the next button
             
-            guard let finishButtonWhenPressed = storyboard?.instantiateViewController(withIdentifier: "finishGoalVC") as? FinishGoalVC else{
-                return
-            }
+            guard let finishButtonWhenPressed = storyboard?.instantiateViewController(withIdentifier: "finishGoalVC") as? FinishGoalVC else {return}
             finishButtonWhenPressed.initData(description: goalTextView.text!, type: goalType)
-            presentDetail(finishButtonWhenPressed)
+            presentingViewController?.presentHomeView(finishButtonWhenPressed)
         }
         
         

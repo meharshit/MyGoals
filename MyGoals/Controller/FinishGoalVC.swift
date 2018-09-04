@@ -27,6 +27,11 @@ class FinishGoalVC: UIViewController,UITextFieldDelegate {
         self.goalType = type
     }
 
+    @IBAction func finishBackButtonVcWhenPressed(_ sender: Any) {
+       dismissDetail()
+    }
+    
+    
     @IBAction func createGoalBtnWasPressed(_ sender: Any) {
         
         // when pressed pass the data in the core data model.

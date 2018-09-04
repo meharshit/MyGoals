@@ -316,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mP-xl-1bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="-317"/>
+            <point key="canvasLocation" x="1528" y="-305"/>
         </scene>
         <!--Finish GoalVC-->
         <scene sceneID="bus-rW-WX0">
@@ -352,7 +352,7 @@
                                         <rect key="frame" x="15" y="35.5" width="24" height="24"/>
                                         <state key="normal" image="back-2"/>
                                         <connections>
-                                            <segue destination="tfv-tW-uTF" kind="presentation" id="c1h-e1-ckR"/>
+                                            <action selector="finishBackButtonVcWhenPressed:" destination="GNl-SZ-OTR" eventType="touchUpInside" id="yVw-Rp-WF8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -435,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93w-r9-JpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="-337"/>
+            <point key="canvasLocation" x="2346" y="-305"/>
         </scene>
     </scenes>
     <resources>

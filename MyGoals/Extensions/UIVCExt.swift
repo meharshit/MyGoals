@@ -31,14 +31,13 @@ extension UIViewController{
     
         guard let viewController = presentedViewController else{return}
         
-        viewController.present(viewControllerToPresent, animated: false) {
-            
+        viewController.dismiss(animated: false) {
+            self.view.window?.layer.add(animation, forKey: kCATransition)
+            self.present(viewControllerToPresent, animated: false, completion: nil)
         }
-        
-        
     }
     
-    func dismissDetail(_ presentTheViewController: UIViewController){
+    func dismissDetail(){
         
         let animation = CATransition()
         animation.type = kCATransitionPush
