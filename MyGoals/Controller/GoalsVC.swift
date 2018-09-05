@@ -98,8 +98,8 @@ extension GoalsVC : UITableViewDelegate, UITableViewDataSource{
         
 //MARK:-  we will create 2 actions delete and add
         
-        // Step1 this is for delete action:-
         
+        // Step1 this is for delete action:-
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath ) in
             // logic for the delete button
             // romoveed by
@@ -109,11 +109,23 @@ extension GoalsVC : UITableViewDelegate, UITableViewDataSource{
             self.fetchDataobjects()
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        // setting the background color of the action labeled as delete
+    
+        // Step 2 add action on the tableView
+        let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+            self.setProgress(atIndexPath: indexPath)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+         // setting the background color of the actions
         deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
-        return [deleteAction] // since the function excepts an array
+        addAction.backgroundColor = #colorLiteral(red: 1, green: 0.7058823529, blue: 0, alpha: 1)
+        
+        // return the actions
+        return [deleteAction,addAction] // since the function excepts an array
+    
     }
+    
 }
+
 
 
 // MARK: -  functions that will fetch data from the presistence store and display that on the tableview.
@@ -147,6 +159,26 @@ extension GoalsVC{
             print("sucess")
         }catch{
             debugPrint("error is \(error.localizedDescription)")
+        }
+    }
+    
+    // function for the progress lable dispalying the logic
+    func setProgress(atIndexPath indexPath: IndexPath){
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else{return}
+        
+        let selectedGoal = goals[indexPath.row]
+        
+        if selectedGoal.completionValue < selectedGoal.goalCompleted{
+            selectedGoal.completionValue += 1
+        }else{
+            return
+        }
+        
+        do{
+            try managedContext.save()
+            print("sucess")
+        }catch{
+            debugPrint("the error is \(error.localizedDescription)")
         }
     }
     

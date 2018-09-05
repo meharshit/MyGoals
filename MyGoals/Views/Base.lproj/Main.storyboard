@@ -139,18 +139,36 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrN-nS-qpe">
+                                                    <rect key="frame" x="0.0" y="-1" width="320" height="70"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t9-Np-vaq">
+                                                            <rect key="frame" x="85.5" y="17" width="150.5" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.75294117647058822" green="0.51372549019607838" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="nrN-nS-qpe" firstAttribute="leading" secondItem="kJk-nK-JK7" secondAttribute="leading" id="8e6-se-ery"/>
                                                 <constraint firstAttribute="trailing" secondItem="pti-fh-m6f" secondAttribute="trailing" constant="8" id="EjG-9E-3ch"/>
                                                 <constraint firstItem="Xr1-WI-PRb" firstAttribute="leading" secondItem="kJk-nK-JK7" secondAttribute="leadingMargin" id="Jz3-zR-VbG"/>
                                                 <constraint firstItem="pti-fh-m6f" firstAttribute="top" secondItem="kJk-nK-JK7" secondAttribute="top" constant="8" id="Sjc-Hn-apj"/>
+                                                <constraint firstAttribute="trailing" secondItem="nrN-nS-qpe" secondAttribute="trailing" id="TvZ-Av-bHc"/>
                                                 <constraint firstItem="Xr1-WI-PRb" firstAttribute="top" secondItem="kJk-nK-JK7" secondAttribute="topMargin" id="gZc-pP-34d"/>
                                                 <constraint firstItem="pti-fh-m6f" firstAttribute="leading" secondItem="Xr1-WI-PRb" secondAttribute="trailing" constant="10" id="luI-fV-HcY"/>
+                                                <constraint firstItem="nrN-nS-qpe" firstAttribute="top" secondItem="kJk-nK-JK7" secondAttribute="top" constant="-1" id="lwo-P0-BRd"/>
+                                                <constraint firstAttribute="bottom" secondItem="nrN-nS-qpe" secondAttribute="bottom" id="ooj-47-G82"/>
                                                 <constraint firstAttribute="bottom" secondItem="pti-fh-m6f" secondAttribute="bottom" constant="8" id="tBd-aH-N9n"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Xr1-WI-PRb" secondAttribute="bottom" id="w0z-HG-cQg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completionView" destination="nrN-nS-qpe" id="gCp-WM-mN3"/>
                                             <outlet property="goalDescription" destination="26T-E3-Df2" id="Rvx-0O-sHp"/>
                                             <outlet property="goalProgressLbl" destination="pti-fh-m6f" id="anO-mV-t6B"/>
                                             <outlet property="goalType" destination="QZb-jk-O1a" id="OFG-fs-fpj"/>
@@ -179,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="-305"/>
+            <point key="canvasLocation" x="744" y="-340"/>
         </scene>
         <!--Create GoalVC View Controller-->
         <scene sceneID="1Aj-1a-crU">
