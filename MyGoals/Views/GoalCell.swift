@@ -17,11 +17,11 @@ class GoalCell: UITableViewCell {
     
     // function to pass proper data when we actually begin or fill data from our coreData model.
     
-    func ConfigureCell(description: String, type: GoalType, goalProgress: Int){
+    func ConfigureCell(goal: Goal){
         
-        self.goalDescription.text = description
-        self.goalType.text = type.rawValue
-        self.goalProgressLbl.text = String(describing: goalProgress) // when we pass a int value in tableview do this way
+        self.goalDescription.text = goal.goalDescription
+        self.goalType.text = goal.goalType
+        self.goalProgressLbl.text = String(describing: goal.completionValue) // when we pass a int value in tableview do this way
         
         
         

@@ -44,7 +44,6 @@ class CreateGoalVCViewController: UIViewController,UITextViewDelegate {
         
     }
     
-    
     @IBAction func shortTermButtonPressed(_ sender: Any) {
         goalType = .shortTerm
         shortTermButtonOutlet.selectedColour()
@@ -54,15 +53,16 @@ class CreateGoalVCViewController: UIViewController,UITextViewDelegate {
     
     @IBAction func nextButtonWasPressed(_ sender: Any) {
         if goalTextView.text != "" && goalTextView.text != "What is your nextGoal"{
+           
             // the code block defines that what is happening whne we are pressing the next button
-            
             guard let finishButtonWhenPressed = storyboard?.instantiateViewController(withIdentifier: "finishGoalVC") as? FinishGoalVC else {return}
             finishButtonWhenPressed.initData(description: goalTextView.text!, type: goalType)
             presentingViewController?.presentHomeView(finishButtonWhenPressed)
         }
         
-        
     }
+    
+    // function to delete the placeholeder when we start editing
     func textViewDidBeginEditing(_ textView: UITextView) {
         goalTextView.text = ""
         goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)

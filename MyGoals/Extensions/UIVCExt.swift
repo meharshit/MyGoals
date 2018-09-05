@@ -19,7 +19,7 @@ extension UIViewController{
         self.view.window?.layer.add(animation, forKey: kCATransition)
         
         
-        present(presentTheViewController, animated: false, completion: nil)// animated is faulse since we have over written the animation above so false
+        present(presentTheViewController, animated: false, completion: nil)// animated is false since we have over written the animation above so false
     }
     
     
